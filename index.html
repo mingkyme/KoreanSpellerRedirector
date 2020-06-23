@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+    <form id="form" method="POST" action="http://speller.cs.pusan.ac.kr/results">
+        <input id="value" name="text1">
+    </form>
+<script>
+var text  = window.location.search.substring(1);
+document.getElementById("value").value = text;
+document.getElementById("form").submit();
+</script>
+</body>
+</html>
