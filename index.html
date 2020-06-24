@@ -1,12 +1,7 @@
 <!doctype html>
 <html>
 <head>
-</head>
-<body>
-    <form id="form" method="POST" action="http://speller.cs.pusan.ac.kr/results">
-        <input id="value" name="text1">
-    </form>
-<script>
+    <script>
     var text  = window.location.search.substring(1);
     var form = document.createElement('form');
     form.method = "POST";
@@ -15,5 +10,7 @@
     textInput.value = "decodeURI(text)";
     form.submit();
 </script>
+</head>
+<body>
 </body>
 </html>
