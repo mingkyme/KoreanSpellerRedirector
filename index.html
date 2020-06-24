@@ -10,12 +10,13 @@
         var text = window.location.search.substring(1);
         var form = document.createElement('form');
         var textInput = document.createElement('input');
+        document.body.appendChild(form);
 
         form.method = "POST";
         form.action = "http://speller.cs.pusan.ac.kr/results";
-
-        textInput.parentElement = form;
-        textInput.value = "decodeURI(text)";
+        form.appendChild(textInput);
+        textInput.name = "text1";
+        textInput.value = decodeURI(text);
         form.submit();
     </script>
 </body>
