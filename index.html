@@ -7,9 +7,13 @@
         <input id="value" name="text1">
     </form>
 <script>
-var text  = window.location.search.substring(1);
-document.getElementById("value").value = decodeURI(text);
-document.getElementById("form").submit();
+    var text  = window.location.search.substring(1);
+    var form = document.createElement('form');
+    form.method = "POST";
+    form.action = "http://speller.cs.pusan.ac.kr/results";
+    textInput.parentElement = form;
+    textInput.value = "decodeURI(text)";
+    form.submit();
 </script>
 </body>
 </html>
